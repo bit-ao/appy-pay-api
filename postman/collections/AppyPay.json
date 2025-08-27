@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "8618aa36-57d2-4eba-9bb1-7591bb288a62",
+		"_postman_id": "392760d2-fec6-4851-bc78-61321a08135b",
 		"name": "AppyPay",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "47194987-8618aa36-57d2-4eba-9bb1-7591bb288a62"
+		"_uid": "47194987-392760d2-fec6-4851-bc78-61321a08135b"
 	},
 	"item": [
 		{
@@ -48,12 +48,11 @@
 									"    pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');",
 									"});"
 								],
-								"type": "text/javascript",
-								"id": "c9c4835f-b173-4eca-81b8-a7ff2048c26c"
+								"type": "text/javascript"
 							}
 						}
 					],
-					"id": "524b9db0-37be-40c2-99bb-a15997b100ae",
+					"id": "9fae4e25-778e-4cee-8254-14a92dca110a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -102,7 +101,7 @@
 					},
 					"response": [
 						{
-							"id": "fd0aa139-b4e4-400d-98d5-133a59d66a85",
+							"id": "9f002b70-8551-49b0-bfcd-37f1bedb027e",
 							"name": "getToken",
 							"originalRequest": {
 								"method": "GET",
@@ -149,88 +148,102 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "Text",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Cache-Control",
-									"value": "no-store, no-cache"
+									"value": "no-store, no-cache",
+									"uuid": "842ab051-e80d-4424-9b7b-ec1e8accdcda"
 								},
 								{
 									"key": "Pragma",
-									"value": "no-cache"
+									"value": "no-cache",
+									"uuid": "2736eca3-ac6e-45e1-a0af-be8ce2b5540d"
 								},
 								{
 									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
+									"value": "application/json; charset=utf-8",
+									"uuid": "beaeae54-106c-4823-83c4-fd815a16eab9"
 								},
 								{
 									"key": "Expires",
-									"value": "-1"
+									"value": "-1",
+									"uuid": "89ff6d1c-c362-46b8-bd39-65f4ad35d96f"
 								},
 								{
 									"key": "Strict-Transport-Security",
-									"value": "max-age=31536000; includeSubDomains"
+									"value": "max-age=31536000; includeSubDomains",
+									"uuid": "0732f59a-c6fc-4a4e-94d9-2e59fbbce817"
 								},
 								{
 									"key": "X-Content-Type-Options",
-									"value": "nosniff"
+									"value": "nosniff",
+									"uuid": "da677a47-42a3-486e-b8d8-27e7bd9228e5"
 								},
 								{
 									"key": "P3P",
-									"value": "CP=\"DSP CUR OTPi IND OTRi ONL FIN\""
+									"value": "CP=\"DSP CUR OTPi IND OTRi ONL FIN\"",
+									"uuid": "8ffbb420-4f13-4a19-8b9a-488b6daf2956"
 								},
 								{
 									"key": "x-ms-request-id",
-									"value": "14e775ac-4531-44cb-839b-38b60a455500"
+									"value": "14e775ac-4531-44cb-839b-38b60a455500",
+									"uuid": "416c32b0-3d11-4df3-9cc2-122f93e73d95"
 								},
 								{
 									"key": "x-ms-ests-server",
-									"value": "2.1.21665.8 - FRC ProdSlices"
+									"value": "2.1.21665.8 - FRC ProdSlices",
+									"uuid": "27ea4b67-77d8-4148-9a96-543c0371af12"
 								},
 								{
 									"key": "x-ms-srs",
-									"value": "1.P"
+									"value": "1.P",
+									"uuid": "23bb0422-5e28-47d0-8c09-779f36d1a989"
 								},
 								{
 									"key": "Content-Security-Policy-Report-Only",
-									"value": "object-src 'none'; base-uri 'self'; script-src 'self' 'nonce-WqisYajeaYE3cbkjgYdfZw' 'unsafe-inline' 'unsafe-eval' https://*.msauth.net https://*.msftauth.net https://*.msftauthimages.net https://*.msauthimages.net https://*.msidentity.com https://*.microsoftonline-p.com https://*.microsoftazuread-sso.com https://*.azureedge.net https://*.outlook.com https://*.office.com https://*.office365.com https://*.microsoft.com https://*.bing.com 'report-sample'; report-uri https://csp.microsoft.com/report/ESTS-UX-All"
+									"value": "object-src 'none'; base-uri 'self'; script-src 'self' 'nonce-WqisYajeaYE3cbkjgYdfZw' 'unsafe-inline' 'unsafe-eval' https://*.msauth.net https://*.msftauth.net https://*.msftauthimages.net https://*.msauthimages.net https://*.msidentity.com https://*.microsoftonline-p.com https://*.microsoftazuread-sso.com https://*.azureedge.net https://*.outlook.com https://*.office.com https://*.office365.com https://*.microsoft.com https://*.bing.com 'report-sample'; report-uri https://csp.microsoft.com/report/ESTS-UX-All",
+									"uuid": "7f0ce04c-f5cb-4dc9-b822-e8e381bbf4bb"
 								},
 								{
 									"key": "X-XSS-Protection",
-									"value": "0"
+									"value": "0",
+									"uuid": "c6481b1c-b9dd-4fd3-8954-463b9fb52452"
 								},
 								{
 									"key": "Set-Cookie",
-									"value": "fpc=AldTGLtIKnJEmXTdB8lyD_CGuk_SAQAAAFpHQeAOAAAAW-AE_AEAAABjSkHgDgAAAA; expires=Fri, 26-Sep-2025 18:52:15 GMT; path=/; secure; HttpOnly; SameSite=None"
+									"value": "fpc=AldTGLtIKnJEmXTdB8lyD_CGuk_SAQAAAFpHQeAOAAAAW-AE_AEAAABjSkHgDgAAAA; expires=Fri, 26-Sep-2025 18:52:15 GMT; path=/; secure; HttpOnly; SameSite=None",
+									"uuid": "af166bd7-0249-418c-89b1-fbba29e8fc67"
 								},
 								{
 									"key": "Set-Cookie",
-									"value": "x-ms-gateway-slice=estsfd; path=/; secure; samesite=none; httponly"
+									"value": "x-ms-gateway-slice=estsfd; path=/; secure; samesite=none; httponly",
+									"uuid": "b466b04a-a851-49ab-9a2e-2b1031b6e5a3"
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 27 Aug 2025 18:52:15 GMT"
+									"value": "Wed, 27 Aug 2025 18:52:15 GMT",
+									"uuid": "025e2f2e-3618-43a9-bc9a-055999d81936"
 								},
 								{
 									"key": "Content-Length",
-									"value": "1538"
+									"value": "1538",
+									"uuid": "ffc92e25-2d9b-4656-952d-5dfcc43e846f"
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
 							"body": "{\n    \"token_type\": \"Bearer\",\n    \"expires_in\": \"3599\",\n    \"ext_expires_in\": \"3599\",\n    \"expires_on\": \"1756324335\",\n    \"not_before\": \"1756320435\",\n    \"resource\": \"\",\n    \"access_token\": \"\"\n}"
 						}
 					]
 				}
 			],
-			"id": "36325d56-619e-432c-bc19-ae95d15ab272"
+			"id": "3410b105-666f-4a76-9fb6-0c1429a14cdb"
 		},
 		{
 			"name": "applications",
 			"item": [
 				{
 					"name": "Get all applications",
-					"id": "23b776bd-ce34-465d-a829-a36a64ca3fb3",
+					"id": "32b63a8e-fb36-405f-8c37-3274d3645ecc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -270,7 +283,7 @@
 					},
 					"response": [
 						{
-							"id": "49388d9e-1bd7-47a1-8757-009b7fe59b93",
+							"id": "52dea5f8-a5c6-4908-9894-773d643ce0de",
 							"name": "index",
 							"originalRequest": {
 								"method": "GET",
@@ -340,54 +353,61 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "Text",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
+									"value": "application/json; charset=utf-8",
+									"uuid": "96308e74-78a2-47ec-9153-dbd99a5509a0"
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 27 Aug 2025 19:03:06 GMT"
+									"value": "Wed, 27 Aug 2025 19:03:06 GMT",
+									"uuid": "52e5ff4a-0c37-4199-9b7d-ca94d257274a"
 								},
 								{
 									"key": "Server",
-									"value": "Microsoft-IIS/10.0"
+									"value": "Microsoft-IIS/10.0",
+									"uuid": "a2354b83-d115-40c3-affd-d874b93e7d1d"
 								},
 								{
 									"key": "Content-Encoding",
-									"value": "gzip"
+									"value": "gzip",
+									"uuid": "7810bbe2-7d1c-4564-8ce3-ca5b7565670c"
 								},
 								{
 									"key": "Transfer-Encoding",
-									"value": "chunked"
+									"value": "chunked",
+									"uuid": "6b14ddd6-9ea4-40cc-b87d-6aaf3da1b546"
 								},
 								{
 									"key": "Vary",
-									"value": "Accept-Encoding"
+									"value": "Accept-Encoding",
+									"uuid": "237a7021-036e-4fae-95b9-f64aea96545d"
 								},
 								{
 									"key": "Strict-Transport-Security",
-									"value": "max-age=2592000"
+									"value": "max-age=2592000",
+									"uuid": "553abf53-6006-4bb3-ac01-76289c4103d7"
 								},
 								{
 									"key": "Request-Context",
-									"value": "appId=cid-v1:effb99db-0946-4cd2-be28-4685565f0267"
+									"value": "appId=cid-v1:effb99db-0946-4cd2-be28-4685565f0267",
+									"uuid": "9ab4a263-8642-4931-9c03-ed4108fe2e29"
 								},
 								{
 									"key": "X-Powered-By",
-									"value": "ASP.NET"
+									"value": "ASP.NET",
+									"uuid": "f46169b4-aeeb-42f7-a6f1-d89982bf77ed"
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
 							"body": "{\n    \"applications\": [\n        {\n            \"id\": \"c613a40b-63cc-4072-8005-94ae63a9533c\",\n            \"name\": \"Comerciante BIT.AO GPO\",\n            \"description\": \"Comerciante BIT.AO GPO\",\n            \"paymentMethod\": \"GPO\",\n            \"isDefault\": true,\n            \"isActive\": true,\n            \"isEnabled\": true,\n            \"createdBy\": \"Efigenio Sebastião\",\n            \"updatedBy\": \"Efigenio Sebastião\",\n            \"createdDate\": \"2025-02-27T09:16:46.296892\",\n            \"updatedDate\": \"2025-02-27T09:17:15.440101\",\n            \"applicationKyes\": [\n                {\n                    \"apiKey\": \"13774509-8b1d-4ee8-b8fe-1a9d1b042dc7\",\n                    \"webHookName\": null,\n                    \"webHookdescription\": null,\n                    \"webHookUrl\": null,\n                    \"isActive\": true,\n                    \"isTransactional\": null\n                }\n            ]\n        },\n        {\n            \"id\": \"38747d40-de5e-43db-954e-e8f4bd6c59e7\",\n            \"name\": \"Comerciante BIT.AO REF(Factura)\",\n            \"description\": \"Comerciante BIT.AO REF(Factura)\",\n            \"paymentMethod\": \"REF\",\n            \"isDefault\": true,\n            \"isActive\": true,\n            \"isEnabled\": true,\n            \"createdBy\": \"Efigenio Sebastião\",\n            \"updatedBy\": \"Fabricio Gonga\",\n            \"createdDate\": \"2025-02-27T09:17:59.1702856\",\n            \"updatedDate\": \"2025-03-03T16:11:40.1015498\",\n            \"applicationKyes\": [\n                {\n                    \"apiKey\": \"0e6f695b-c757-4803-8386-cffa0c02265a\",\n                    \"webHookName\": null,\n                    \"webHookdescription\": null,\n                    \"webHookUrl\": null,\n                    \"isActive\": true,\n                    \"isTransactional\": null\n                },\n                {\n                    \"apiKey\": \"2c3b230a-3511-4f26-9c5e-88323f18cded\",\n                    \"webHookName\": null,\n                    \"webHookdescription\": null,\n                    \"webHookUrl\": null,\n                    \"isActive\": true,\n                    \"isTransactional\": null\n                }\n            ]\n        }\n    ],\n    \"totalCount\": 2,\n    \"hasMorePages\": false\n}"
 						}
 					]
 				},
 				{
 					"name": "Get an application point-of-sales",
-					"id": "198f0251-d8ee-4683-b7c3-c543c1634fe5",
+					"id": "fa5c7f60-8535-45e9-825c-2e873c398ae0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -455,14 +475,14 @@
 					"response": []
 				}
 			],
-			"id": "b63de758-284c-4e21-abff-531750a284df"
+			"id": "820a7908-5c5a-41ca-a774-af057e922dda"
 		},
 		{
 			"name": "charges",
 			"item": [
 				{
 					"name": "Get all charges",
-					"id": "1cd558d5-2d33-448c-a04d-7051b9215688",
+					"id": "a777c2e6-1099-47d4-bada-1d79225837cd",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -569,7 +589,7 @@
 					},
 					"response": [
 						{
-							"id": "a43f3236-45d1-4433-aae1-9b30782f6a56",
+							"id": "5b02d167-6f6a-47ad-ab4b-a661c777a78e",
 							"name": "example",
 							"originalRequest": {
 								"method": "GET",
@@ -605,54 +625,61 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "Text",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
+									"value": "application/json; charset=utf-8",
+									"uuid": "71967b17-20c6-4519-800b-fe29f71ac472"
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 27 Aug 2025 19:12:38 GMT"
+									"value": "Wed, 27 Aug 2025 19:12:38 GMT",
+									"uuid": "71479985-85c0-4969-b6fe-14b75c4ab744"
 								},
 								{
 									"key": "Server",
-									"value": "Microsoft-IIS/10.0"
+									"value": "Microsoft-IIS/10.0",
+									"uuid": "5c7a45ef-a52c-4d63-bc23-ef7b145aac72"
 								},
 								{
 									"key": "Content-Encoding",
-									"value": "gzip"
+									"value": "gzip",
+									"uuid": "f42d1842-f2ee-4728-a959-66d32f8c9c2b"
 								},
 								{
 									"key": "Transfer-Encoding",
-									"value": "chunked"
+									"value": "chunked",
+									"uuid": "3699ab5f-37c6-4851-a135-d765493a2ec3"
 								},
 								{
 									"key": "Vary",
-									"value": "Accept-Encoding"
+									"value": "Accept-Encoding",
+									"uuid": "c0bb13b4-478e-4e21-a398-eb5ff068324c"
 								},
 								{
 									"key": "Strict-Transport-Security",
-									"value": "max-age=2592000"
+									"value": "max-age=2592000",
+									"uuid": "494add61-6498-43b1-820e-c8b2f1d58331"
 								},
 								{
 									"key": "Request-Context",
-									"value": "appId=cid-v1:effb99db-0946-4cd2-be28-4685565f0267"
+									"value": "appId=cid-v1:effb99db-0946-4cd2-be28-4685565f0267",
+									"uuid": "e92b3bd7-ce5d-41eb-9be2-d8e5e3542960"
 								},
 								{
 									"key": "X-Powered-By",
-									"value": "ASP.NET"
+									"value": "ASP.NET",
+									"uuid": "a7cdd4a5-5d7a-491c-8efa-d4e8780705f3"
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
 							"body": "{\n    \"payments\": [\n        {\n            \"id\": \"99C3892F-8018-4796-BA21-9054277E354D\",\n            \"merchantTransactionId\": \"TA_4c0128aa-19c1-4b33-997d-14331307b412\",\n            \"type\": \"Charge\",\n            \"operation\": \"ONE_TIME_PAYMENT\",\n            \"amount\": 3,\n            \"currency\": \"AOA\",\n            \"status\": \"Success\",\n            \"description\": \"REF Application Activate Charge\",\n            \"disputes\": false,\n            \"applicationFeeAmount\": 0,\n            \"paymentMethod\": \"REF\",\n            \"createdDate\": \"2025-02-27T09:18:07.6208211\",\n            \"updatedDate\": \"2025-02-27T09:23:55.3424468\",\n            \"options\": [],\n            \"reference\": {\n                \"referenceNumber\": \"896775001\",\n                \"dueDate\": \"2025-03-02T09:18:07.7133796\",\n                \"entity\": \"00348\"\n            }\n        },\n        {\n            \"id\": \"F1D00117-30E8-4312-9FBF-3C30752225D4\",\n            \"merchantTransactionId\": \"T20250227092105\",\n            \"type\": \"Charge\",\n            \"operation\": \"ONE_TIME_PAYMENT\",\n            \"amount\": 50,\n            \"currency\": \"AOA\",\n            \"status\": \"Failed\",\n            \"description\": \"POSTMAN_Sync_On_TST-TS20250227092105\",\n            \"disputes\": false,\n            \"applicationFeeAmount\": 0,\n            \"paymentMethod\": \"GPO\",\n            \"createdDate\": \"2025-02-27T09:21:05.6730236\",\n            \"updatedDate\": \"2025-02-27T09:22:41.1939485\",\n            \"options\": [],\n            \"reference\": null\n        },\n        {\n            \"id\": \"01B44843-FD2D-49FB-B0CC-CB0AF0C682C8\",\n            \"merchantTransactionId\": \"Xm2502271711415\",\n            \"type\": \"Charge\",\n            \"operation\": \"ONE_TIME_PAYMENT\",\n            \"amount\": 14500,\n            \"currency\": \"AOA\",\n            \"status\": \"Pending\",\n            \"description\": \"Pagamento\",\n            \"disputes\": false,\n            \"applicationFeeAmount\": 0,\n            \"paymentMethod\": \"REF\",\n            \"createdDate\": \"2025-02-27T17:11:46.4173333\",\n            \"updatedDate\": \"2025-02-27T17:11:47.8553425\",\n            \"options\": [],\n            \"reference\": {\n                \"referenceNumber\": \"100288458\",\n                \"dueDate\": \"2025-03-02T17:11:47.6206245\",\n                \"entity\": \"00348\"\n            }\n        },\n        {\n            \"id\": \"D2761E27-80E2-4D89-9FA9-F45097BCD3FB\",\n            \"merchantTransactionId\": \"00002323\",\n            \"type\": \"Charge\",\n            \"operation\": \"ONE_TIME_PAYMENT\",\n            \"amount\": 1000,\n            \"currency\": \"AOA\",\n            \"status\": \"Failed\",\n            \"description\": \"Pagamento URL\",\n            \"disputes\": false,\n            \"applicationFeeAmount\": 0,\n            \"paymentMethod\": \"GPO\",\n            \"createdDate\": \"2025-03-15T22:33:57.6060631\",\n            \"updatedDate\": \"2025-03-15T22:34:03.7164964\",\n            \"options\": [],\n            \"reference\": null\n        },\n        {\n            \"id\": \"3E75B6B8-7944-42F0-9BC2-477124A4D483\",\n            \"merchantTransactionId\": \"sK2505070118387\",\n            \"type\": \"Charge\",\n            \"operation\": \"ONE_TIME_PAYMENT\",\n            \"amount\": 1000,\n            \"currency\": \"AOA\",\n            \"status\": \"Pending\",\n            \"description\": \"Pagamento da encomenda 10\",\n            \"disputes\": false,\n            \"applicationFeeAmount\": 0,\n            \"paymentMethod\": \"REF\",\n            \"createdDate\": \"2025-05-07T01:18:39.743706\",\n            \"updatedDate\": \"2025-05-07T01:18:40.7604919\",\n            \"options\": [],\n            \"reference\": {\n                \"referenceNumber\": \"723582502\",\n                \"dueDate\": \"2025-05-10T01:18:40.5599421\",\n                \"entity\": \"00348\"\n            }\n        },\n        {\n            \"id\": \"52911A6D-5A42-44C3-BBCB-AFE7A641541D\",\n            \"merchantTransactionId\": \"JX2505070120233\",\n            \"type\": \"Charge\",\n            \"operation\": \"ONE_TIME_PAYMENT\",\n            \"amount\": 100,\n            \"currency\": \"AOA\",\n            \"status\": \"Failed\",\n            \"description\": \"Appy Pay charge Request\",\n            \"disputes\": false,\n            \"applicationFeeAmount\": 0,\n            \"paymentMethod\": \"GPO\",\n            \"createdDate\": \"2025-05-07T01:20:25.0960343\",\n            \"updatedDate\": \"2025-05-07T01:20:31.0062787\",\n            \"options\": [],\n            \"reference\": null\n        },\n        {\n            \"id\": \"58951751-9079-4960-BC16-DABE7159D4E6\",\n            \"merchantTransactionId\": \"Xr2505070120437\",\n            \"type\": \"Charge\",\n            \"operation\": \"ONE_TIME_PAYMENT\",\n            \"amount\": 200,\n            \"currency\": \"AOA\",\n            \"status\": \"Failed\",\n            \"description\": \"Appy Pay charge Request\",\n            \"disputes\": false,\n            \"applicationFeeAmount\": 0,\n            \"paymentMethod\": \"GPO\",\n            \"createdDate\": \"2025-05-07T01:20:44.0287644\",\n            \"updatedDate\": \"2025-05-07T01:20:46.9840793\",\n            \"options\": [],\n            \"reference\": null\n        },\n        {\n            \"id\": \"B8126AD7-326C-44E9-825E-0204D87A870C\",\n            \"merchantTransactionId\": \"HV2505070120594\",\n            \"type\": \"Charge\",\n            \"operation\": \"ONE_TIME_PAYMENT\",\n            \"amount\": 500,\n            \"currency\": \"AOA\",\n            \"status\": \"Failed\",\n            \"description\": \"Appy Pay charge Request\",\n            \"disputes\": false,\n            \"applicationFeeAmount\": 0,\n            \"paymentMethod\": \"GPO\",\n            \"createdDate\": \"2025-05-07T01:20:59.7636475\",\n            \"updatedDate\": \"2025-05-07T01:21:02.1419569\",\n            \"options\": [],\n            \"reference\": null\n        }\n    ],\n    \"totalCount\": 8,\n    \"hasMorePages\": false\n}"
 						}
 					]
 				},
 				{
 					"name": "Post a Charge",
-					"id": "d55aefb5-da89-4a3e-921c-8f977320c0cc",
+					"id": "db7f45ca-a852-4ee8-920e-02a1c802f556",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -699,7 +726,7 @@
 					},
 					"response": [
 						{
-							"id": "5f83a791-e080-4883-885b-e7778083ba01",
+							"id": "65639ee3-f3f2-4c92-94b7-a78fd8cc1934",
 							"name": "TESTE PAGAMENTO POR REFERENCIA",
 							"originalRequest": {
 								"method": "POST",
@@ -727,43 +754,48 @@
 							"status": "Accepted",
 							"code": 202,
 							"_postman_previewlanguage": "Text",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
+									"value": "application/json; charset=utf-8",
+									"uuid": "ffe5056a-0873-4e0c-8577-0086400ea0e1"
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 27 Aug 2025 19:57:30 GMT"
+									"value": "Wed, 27 Aug 2025 19:57:30 GMT",
+									"uuid": "e0aa9afb-0027-4029-a7f0-d86af4398c8c"
 								},
 								{
 									"key": "Server",
-									"value": "Microsoft-IIS/10.0"
+									"value": "Microsoft-IIS/10.0",
+									"uuid": "6ffc2132-c2ab-44d7-b6d0-c0ab47edfcf9"
 								},
 								{
 									"key": "Transfer-Encoding",
-									"value": "chunked"
+									"value": "chunked",
+									"uuid": "8c20887e-3f33-4209-b58e-b215df73068f"
 								},
 								{
 									"key": "Strict-Transport-Security",
-									"value": "max-age=2592000"
+									"value": "max-age=2592000",
+									"uuid": "bb553cfb-3fce-494d-a7be-fb95e74262ac"
 								},
 								{
 									"key": "Request-Context",
-									"value": "appId=cid-v1:effb99db-0946-4cd2-be28-4685565f0267"
+									"value": "appId=cid-v1:effb99db-0946-4cd2-be28-4685565f0267",
+									"uuid": "15ef58b9-cc70-4cea-a4f5-54c0f0ad98f5"
 								},
 								{
 									"key": "X-Powered-By",
-									"value": "ASP.NET"
+									"value": "ASP.NET",
+									"uuid": "07690e9c-fa3b-4105-b16d-1d921b662d7a"
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
 							"body": "{\n    \"id\": \"982a7d4a-d828-42ec-8315-258157f3949c\",\n    \"responseStatus\": {\n        \"successful\": true,\n        \"status\": \"Pending\",\n        \"code\": 101,\n        \"message\": \"A solicitação foi aceita para processamento.\",\n        \"source\": \"REF\",\n        \"sourceDetails\": {\n            \"attempt\": 1,\n            \"type\": \"NONE\",\n            \"code\": \"NONE\",\n            \"message\": \"OK\"\n        },\n        \"reference\": {\n            \"referenceNumber\": \"858996778\",\n            \"dueDate\": \"2025-08-30T19:57:30.6833556+00:00\",\n            \"entity\": \"00348\"\n        }\n    }\n}"
 						},
 						{
-							"id": "2ef5362b-e1db-4280-b8ba-abdf803d0d60",
+							"id": "6a03d98c-fdbc-44e9-85b5-1830f270ddd4",
 							"name": "Recusado pelo cliente",
 							"originalRequest": {
 								"method": "POST",
@@ -791,51 +823,58 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "Text",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
+									"value": "application/json; charset=utf-8",
+									"uuid": "0d602fd6-4826-468e-af41-925e93353023"
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 27 Aug 2025 20:16:54 GMT"
+									"value": "Wed, 27 Aug 2025 20:16:54 GMT",
+									"uuid": "72e80ec7-cef9-4427-ba7c-3fa2d5f8c57e"
 								},
 								{
 									"key": "Server",
-									"value": "Microsoft-IIS/10.0"
+									"value": "Microsoft-IIS/10.0",
+									"uuid": "8198ea0b-9ea8-4c46-b08b-b28d57815bb5"
 								},
 								{
 									"key": "Content-Encoding",
-									"value": "gzip"
+									"value": "gzip",
+									"uuid": "88761c8f-98d5-4872-9af9-96b410e61736"
 								},
 								{
 									"key": "Transfer-Encoding",
-									"value": "chunked"
+									"value": "chunked",
+									"uuid": "eb823c1d-3364-4c46-875d-b0b7794722b7"
 								},
 								{
 									"key": "Vary",
-									"value": "Accept-Encoding"
+									"value": "Accept-Encoding",
+									"uuid": "2d9a657e-7f7b-4672-b9f5-cb8b72b6a969"
 								},
 								{
 									"key": "Strict-Transport-Security",
-									"value": "max-age=2592000"
+									"value": "max-age=2592000",
+									"uuid": "f6f766f9-42f2-41b1-bf88-5273b9a37bbb"
 								},
 								{
 									"key": "Request-Context",
-									"value": "appId=cid-v1:70cec0fb-d432-4469-b157-318924c09066"
+									"value": "appId=cid-v1:70cec0fb-d432-4469-b157-318924c09066",
+									"uuid": "8fd51075-6bd4-44f4-9d76-96bcce41ab9a"
 								},
 								{
 									"key": "X-Powered-By",
-									"value": "ASP.NET"
+									"value": "ASP.NET",
+									"uuid": "e34116aa-9063-4ac9-bf95-9f4ebe67f383"
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
 							"body": "{\n    \"id\": \"007ffd31-2467-4ce0-939d-69de4cc6af71\",\n    \"responseStatus\": {\n        \"successful\": false,\n        \"status\": \"Failed\",\n        \"code\": 231,\n        \"message\": \"Pagamento não autorizado pelo cliente. \",\n        \"source\": \"GPO\",\n        \"sourceDetails\": {\n            \"attempt\": 1,\n            \"type\": \"EPMS_PROCESSOR\",\n            \"code\": \"EPMS_940\",\n            \"message\": \"Recusado pelo cliente.\"\n        },\n        \"reference\": null\n    }\n}"
 						},
 						{
-							"id": "6e161f7b-1bd5-47c5-9a48-70a287b94a7d",
+							"id": "99e73f6b-5767-432b-ba5b-2fa20f0671c9",
 							"name": "Pagamento assincrono com sucesso",
 							"originalRequest": {
 								"method": "POST",
@@ -870,43 +909,48 @@
 							"status": "Accepted",
 							"code": 202,
 							"_postman_previewlanguage": "Text",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
+									"value": "application/json; charset=utf-8",
+									"uuid": "f109bf89-f183-47d5-b048-13a8e19b3c7a"
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 27 Aug 2025 20:19:58 GMT"
+									"value": "Wed, 27 Aug 2025 20:19:58 GMT",
+									"uuid": "c1edd95f-b31c-416f-8f67-9c5c3c9f9ca1"
 								},
 								{
 									"key": "Server",
-									"value": "Microsoft-IIS/10.0"
+									"value": "Microsoft-IIS/10.0",
+									"uuid": "7358af48-1f9d-4c6c-8541-f449e515aa99"
 								},
 								{
 									"key": "Transfer-Encoding",
-									"value": "chunked"
+									"value": "chunked",
+									"uuid": "4d41a5fc-e624-4c69-8685-db8d46f7475c"
 								},
 								{
 									"key": "Strict-Transport-Security",
-									"value": "max-age=2592000"
+									"value": "max-age=2592000",
+									"uuid": "d13b4ff9-4683-4991-9443-83cf426a7531"
 								},
 								{
 									"key": "Request-Context",
-									"value": "appId=cid-v1:70cec0fb-d432-4469-b157-318924c09066"
+									"value": "appId=cid-v1:70cec0fb-d432-4469-b157-318924c09066",
+									"uuid": "e038efe9-de7c-41b4-aaad-cd4b17401936"
 								},
 								{
 									"key": "X-Powered-By",
-									"value": "ASP.NET"
+									"value": "ASP.NET",
+									"uuid": "2c26ed71-6a51-4f40-8866-41633e7a97f5"
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
 							"body": "{\n    \"id\": \"f44856d2-dd69-4dec-a831-91cb0074426d\",\n    \"responseStatus\": {\n        \"successful\": true,\n        \"status\": \"Requested\",\n        \"code\": 101,\n        \"message\": \"A solicitação foi aceita para processamento.\",\n        \"source\": \"GPO\",\n        \"sourceDetails\": null\n    }\n}"
 						},
 						{
-							"id": "ee4e593b-9fa7-46db-8fab-f11a551ee3d4",
+							"id": "e31d6b9b-1e78-4ad9-8fb8-8703a724b5c3",
 							"name": "Pagamento sincrono aceite",
 							"originalRequest": {
 								"method": "POST",
@@ -942,54 +986,61 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "Text",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
+									"value": "application/json; charset=utf-8",
+									"uuid": "bcf3b5f2-3739-44f6-b188-796978dff007"
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 27 Aug 2025 20:22:33 GMT"
+									"value": "Wed, 27 Aug 2025 20:22:33 GMT",
+									"uuid": "e074cdbf-a771-42b4-836c-14ec809ee1c2"
 								},
 								{
 									"key": "Server",
-									"value": "Microsoft-IIS/10.0"
+									"value": "Microsoft-IIS/10.0",
+									"uuid": "83b6ddfe-1a79-4a17-96a4-c260b4d17b17"
 								},
 								{
 									"key": "Content-Encoding",
-									"value": "gzip"
+									"value": "gzip",
+									"uuid": "f3ee41e0-2486-4bc5-bc4c-ffaac9739dbe"
 								},
 								{
 									"key": "Transfer-Encoding",
-									"value": "chunked"
+									"value": "chunked",
+									"uuid": "314c996f-c0ac-482d-aec4-d17b60d7ec69"
 								},
 								{
 									"key": "Vary",
-									"value": "Accept-Encoding"
+									"value": "Accept-Encoding",
+									"uuid": "97bd2503-657e-40ff-bda2-41d768372238"
 								},
 								{
 									"key": "Strict-Transport-Security",
-									"value": "max-age=2592000"
+									"value": "max-age=2592000",
+									"uuid": "60ef28d4-35ee-426e-9ff2-90f695168e83"
 								},
 								{
 									"key": "Request-Context",
-									"value": "appId=cid-v1:70cec0fb-d432-4469-b157-318924c09066"
+									"value": "appId=cid-v1:70cec0fb-d432-4469-b157-318924c09066",
+									"uuid": "4a80d4c4-59d8-4ade-885d-897b3f6507f4"
 								},
 								{
 									"key": "X-Powered-By",
-									"value": "ASP.NET"
+									"value": "ASP.NET",
+									"uuid": "31a7a874-224c-49ff-9c65-329e3787b0e8"
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
 							"body": "{\n    \"id\": \"cf266ab3-df6f-4c09-a447-36248123239d\",\n    \"responseStatus\": {\n        \"successful\": true,\n        \"status\": \"Success\",\n        \"code\": 100,\n        \"message\": \"Obrigado! O seu pagamento foi registado com Sucesso.\",\n        \"source\": \"GPO\",\n        \"sourceDetails\": {\n            \"attempt\": 1,\n            \"type\": \"NONE\",\n            \"code\": \"NONE\",\n            \"message\": \"OK\"\n        },\n        \"reference\": null\n    }\n}"
 						}
 					]
 				},
 				{
 					"name": "Get a charge",
-					"id": "f1f98232-513a-4a72-bdd3-4792dd231bdc",
+					"id": "ccf0f7f6-5391-4033-8110-9cff0af6ab79",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1037,7 +1088,7 @@
 					},
 					"response": [
 						{
-							"id": "0a198c45-2911-4c79-8b01-5194ed3d0321",
+							"id": "6c3d1c84-f9d6-41f5-a05d-ed3d12be28a3",
 							"name": "Exemplo",
 							"originalRequest": {
 								"method": "GET",
@@ -1074,86 +1125,93 @@
 							"status": "OK",
 							"code": 200,
 							"_postman_previewlanguage": "Text",
-							"_postman_previewtype": "html",
 							"header": [
 								{
 									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
+									"value": "application/json; charset=utf-8",
+									"uuid": "b8126ecb-1ed5-4fab-911c-b05e6ca52665"
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 27 Aug 2025 20:26:19 GMT"
+									"value": "Wed, 27 Aug 2025 20:26:19 GMT",
+									"uuid": "6273abef-617c-4702-85a4-11eb1e2a82e3"
 								},
 								{
 									"key": "Server",
-									"value": "Microsoft-IIS/10.0"
+									"value": "Microsoft-IIS/10.0",
+									"uuid": "b8430106-b938-4bd5-a07a-743c54ea8d19"
 								},
 								{
 									"key": "Content-Encoding",
-									"value": "gzip"
+									"value": "gzip",
+									"uuid": "862cff8a-423f-499b-af37-f03dfea31118"
 								},
 								{
 									"key": "Transfer-Encoding",
-									"value": "chunked"
+									"value": "chunked",
+									"uuid": "b1d9f258-4b7e-42de-96c3-c937fd019dd8"
 								},
 								{
 									"key": "Vary",
-									"value": "Accept-Encoding"
+									"value": "Accept-Encoding",
+									"uuid": "f6da0a7e-3c18-4deb-bea9-5397c69c667f"
 								},
 								{
 									"key": "Strict-Transport-Security",
-									"value": "max-age=2592000"
+									"value": "max-age=2592000",
+									"uuid": "bd5b9237-5f8a-4920-bfec-1a59cdffe1ec"
 								},
 								{
 									"key": "Request-Context",
-									"value": "appId=cid-v1:70cec0fb-d432-4469-b157-318924c09066"
+									"value": "appId=cid-v1:70cec0fb-d432-4469-b157-318924c09066",
+									"uuid": "e502c9a6-f427-4f5b-8ec7-2768d2292f84"
 								},
 								{
 									"key": "X-Powered-By",
-									"value": "ASP.NET"
+									"value": "ASP.NET",
+									"uuid": "28200e35-e150-44ec-83e1-b73a1e2aba66"
 								}
 							],
 							"cookie": [],
-							"responseTime": null,
 							"body": "{\n    \"payment\": {\n        \"id\": \"8be7404e-5300-4f9b-8260-33d0d968e38a\",\n        \"merchantTransactionId\": \"zc2502211633215\",\n        \"type\": \"Charge\",\n        \"operation\": \"ONE_TIME_PAYMENT\",\n        \"amount\": 1000,\n        \"currency\": \"AOA\",\n        \"status\": \"Success\",\n        \"description\": \"Appy Pay charge Request\",\n        \"disputes\": false,\n        \"applicationFeeAmount\": 0,\n        \"paymentMethod\": \"GPO\",\n        \"createdDate\": \"2025-02-21T16:33:21.7644269\",\n        \"updatedDate\": \"2025-02-21T16:33:36.1863752\",\n        \"options\": [],\n        \"reference\": null,\n        \"eletronicReceipt\": null,\n        \"transactionEvents\": [\n            {\n                \"id\": 930577,\n                \"transactionId\": \"8be7404e-5300-4f9b-8260-33d0d968e38a\",\n                \"type\": \"Charge\",\n                \"providerTransactionId\": \"3JTDPI14ZVN638OB\",\n                \"merchantReceipt\": null,\n                \"customerReceipt\": null,\n                \"actionStatus\": false,\n                \"createdDate\": \"2025-02-21T16:33:36.1845789\",\n                \"responseStatus\": {\n                    \"successful\": true,\n                    \"code\": 100,\n                    \"message\": \"Obrigado! O seu pagamento foi registado com Sucesso.\",\n                    \"source\": \"GPO\",\n                    \"sourceDetails\": null\n                }\n            }\n        ]\n    }\n}"
 						}
 					]
 				}
 			],
-			"id": "44cbd8f2-79c2-43bc-8ec5-285e1e9332aa",
+			"id": "0c9c8aa9-482a-4b2c-8a9b-db1f0f97f14c",
 			"description": "This service allows merchant support team to get a list of charges. Also, allows merchant support team to search for specific charges based on filters. This functionality is useful to check a pending payment status or check charges that meet some criteria."
 		},
 		{
 			"name": "references",
 			"item": [],
-			"id": "d96e9a74-596e-4992-b806-f195d9388cb8"
+			"id": "5e5a6155-9333-42e4-b88a-f04f0c4379d4"
 		},
 		{
 			"name": "refunds",
 			"item": [],
-			"id": "94d4414f-420c-4bcb-abb9-4aff020c892b"
+			"id": "b7fdeb7b-8292-4aa0-b57e-690774c1361a"
 		},
 		{
 			"name": "reverses",
 			"item": [],
-			"id": "da8dd75f-9ad5-4bfd-98fa-846ddba93d84"
+			"id": "9d5f0b0b-51bb-46c6-873f-f967727790ae"
 		},
 		{
 			"name": "funds-transfers",
 			"item": [],
-			"id": "f914bd2e-14f4-4fbf-9770-f63872283a9f"
+			"id": "720968c8-58a9-4851-a0a9-3f7c6a6126db"
 		},
 		{
 			"name": "accounts",
 			"item": [],
-			"id": "9724d961-c8b3-4682-87d6-868e767d9a77"
+			"id": "985bd5ef-8cac-4d94-a6f7-ec8247a679bb"
 		},
 		{
 			"name": "qr-codes",
 			"item": [
 				{
 					"name": "Post a GPO QR Code",
-					"id": "253f2bb8-5d1d-41fd-a2e6-7ba4c1c910ab",
+					"id": "862b372a-466f-47c0-b894-466d6010388a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1205,17 +1263,17 @@
 					"response": []
 				}
 			],
-			"id": "2434797e-289b-46e8-9c8e-4c38dc300c24"
+			"id": "48ca8f3f-5c32-4721-9b1a-35d60a87b1da"
 		},
 		{
 			"name": "direct-debit-mandates",
 			"item": [],
-			"id": "36b6748f-c6f3-49dd-94c5-5112ecad624a"
+			"id": "198a23e6-c839-4692-b2f6-9266ffc8d4fd"
 		},
 		{
 			"name": "application-sdd-creditor-accounts",
 			"item": [],
-			"id": "b2995fc9-f6c3-4790-8558-85493cf94d03"
+			"id": "b4441009-5df3-40cb-bf6a-a7ffd98ef665"
 		}
 	]
 }

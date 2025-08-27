@@ -3,12 +3,14 @@ configVersion = 1.1.0
 type = apiEntityData
 
 [config]
-id = 
+id = 2d1e23d9-4306-47dc-a319-d782d2df5c82
 
 [config.relations]
 
 [config.relations.collections]
-rootDirectory = 
+rootDirectory = postman/collections
+files[] = {"id":"47194987-8618aa36-57d2-4eba-9bb1-7591bb288a62","path":"47194987-21ead603-c5f3-4e1a-92a5-ed039110ace6.json","metaData":{}}
+files[] = {"id":"47194987-392760d2-fec6-4851-bc78-61321a08135b","path":"AppyPay.json","metaData":{}}
 
 [config.relations.collections.metaData]
 
