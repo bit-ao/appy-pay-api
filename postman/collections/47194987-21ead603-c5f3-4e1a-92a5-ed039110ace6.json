@@ -1,0 +1,1211 @@
+{
+	"info": {
+		"_postman_id": "47194987-21ead603-c5f3-4e1a-92a5-ed039110ace6",
+		"name": "AppyPay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "getToken",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"    pm.expect(pm.response.code).to.eql(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response has the required fields\", function () {",
+									"    const responseData = pm.response.json();",
+									"",
+									"    pm.expect(responseData).to.be.an('object');",
+									"    pm.expect(responseData).to.have.all.keys('token_type', 'expires_in', 'ext_expires_in', 'expires_on', 'not_before', 'resource', 'access_token');",
+									"});",
+									"",
+									"",
+									"pm.test(\"Access token must be a non-empty string\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.have.property('access_token').that.is.a('string').and.to.have.lengthOf.above(0, \"Access token should not be empty\");",
+									"});",
+									"",
+									"",
+									"pm.test(\"Expires_in is a positive integer\", function () {",
+									"    const responseData = pm.response.json();",
+									"    ",
+									"    pm.expect(responseData).to.have.property('expires_in');",
+									"    pm.expect(responseData.expires_in).to.be.a('number').and.to.be.above(0);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Content-Type is application/json\", function () {",
+									"    pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "47194987-a5d8ae22-a6f1-4916-8d62-147011c5c5bf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text",
+									"uuid": "77602c14-1110-475f-8860-79a1ab203483"
+								},
+								{
+									"key": "client_id",
+									"value": "{{client_id}}",
+									"type": "text",
+									"uuid": "58d3e0bf-d8b3-4675-abba-aee216169c18"
+								},
+								{
+									"key": "client_secret",
+									"value": "{{client_secret}}",
+									"type": "text",
+									"uuid": "792cfd96-f43f-4125-a398-66d99583c2f7"
+								},
+								{
+									"key": "resource",
+									"value": "{{resource}}",
+									"type": "text",
+									"uuid": "9bc7675c-599d-4aa5-bba6-4f09fabdc6c2"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{endpoint}}/token",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"token"
+							]
+						},
+						"description": "Onde encontrar o client_id e o client_secret\n\n<img src=\"https://content.pstmn.io/584f4963-1793-4257-8a72-354783373bc1/aW1hZ2UucG5n\" alt=\"\" height=\"753\" width=\"1600\">"
+					},
+					"response": [
+						{
+							"id": "47194987-d92c71ab-4eb9-407f-8057-abc6c3e2aeb8",
+							"name": "getToken",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "text",
+											"uuid": "77602c14-1110-475f-8860-79a1ab203483"
+										},
+										{
+											"key": "client_id",
+											"value": "{{client_id}}",
+											"type": "text",
+											"uuid": "58d3e0bf-d8b3-4675-abba-aee216169c18"
+										},
+										{
+											"key": "client_secret",
+											"value": "{{client_secret}}",
+											"type": "text",
+											"uuid": "792cfd96-f43f-4125-a398-66d99583c2f7"
+										},
+										{
+											"key": "resource",
+											"value": "2aed7612-de64-46b5-9e59-1f48f8902d14",
+											"type": "text",
+											"uuid": "9bc7675c-599d-4aa5-bba6-4f09fabdc6c2"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{endpoint}}/token",
+									"host": [
+										"{{endpoint}}"
+									],
+									"path": [
+										"token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "no-store, no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "P3P",
+									"value": "CP=\"DSP CUR OTPi IND OTRi ONL FIN\""
+								},
+								{
+									"key": "x-ms-request-id",
+									"value": "14e775ac-4531-44cb-839b-38b60a455500"
+								},
+								{
+									"key": "x-ms-ests-server",
+									"value": "2.1.21665.8 - FRC ProdSlices"
+								},
+								{
+									"key": "x-ms-srs",
+									"value": "1.P"
+								},
+								{
+									"key": "Content-Security-Policy-Report-Only",
+									"value": "object-src 'none'; base-uri 'self'; script-src 'self' 'nonce-WqisYajeaYE3cbkjgYdfZw' 'unsafe-inline' 'unsafe-eval' https://*.msauth.net https://*.msftauth.net https://*.msftauthimages.net https://*.msauthimages.net https://*.msidentity.com https://*.microsoftonline-p.com https://*.microsoftazuread-sso.com https://*.azureedge.net https://*.outlook.com https://*.office.com https://*.office365.com https://*.microsoft.com https://*.bing.com 'report-sample'; report-uri https://csp.microsoft.com/report/ESTS-UX-All"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "fpc=AldTGLtIKnJEmXTdB8lyD_CGuk_SAQAAAFpHQeAOAAAAW-AE_AEAAABjSkHgDgAAAA; expires=Fri, 26-Sep-2025 18:52:15 GMT; path=/; secure; HttpOnly; SameSite=None"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "x-ms-gateway-slice=estsfd; path=/; secure; samesite=none; httponly"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Aug 2025 18:52:15 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1538"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"token_type\": \"Bearer\",\n    \"expires_in\": \"3599\",\n    \"ext_expires_in\": \"3599\",\n    \"expires_on\": \"1756324335\",\n    \"not_before\": \"1756320435\",\n    \"resource\": \"\",\n    \"access_token\": \"\"\n}"
+						}
+					]
+				}
+			],
+			"id": "47194987-d8e125a1-9c57-4e0a-900a-83d30f799807"
+		},
+		{
+			"name": "applications",
+			"item": [
+				{
+					"name": "Get all applications",
+					"id": "47194987-d381ed99-c4ed-49ee-bc99-423bfa634890",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "pt-BR",
+								"description": "Language preferences that is passed via HTTP when a document is requested",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server}}/{{api_version}}/applications",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"{{api_version}}",
+								"applications"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "47194987-583a28a4-f2ba-41f7-82e1-50e7634e1b7b",
+							"name": "index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{Token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server}}/{{api_version}}/applications",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"{{api_version}}",
+										"applications"
+									],
+									"query": [
+										{
+											"key": "isActive",
+											"value": "true",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "isDefault",
+											"value": "true",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "isEnabled",
+											"value": "true",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "50",
+											"description": "Limit of returned records",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "paymentMethod",
+											"value": null,
+											"description": "The payment method tag name\n\nExample:\nGPO, UMM, REF, eTPA",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "skip",
+											"value": null,
+											"type": "text",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Aug 2025 19:03:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "Request-Context",
+									"value": "appId=cid-v1:effb99db-0946-4cd2-be28-4685565f0267"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"applications\": [\n        {\n            \"id\": \"c613a40b-63cc-4072-8005-94ae63a9533c\",\n            \"name\": \"Comerciante BIT.AO GPO\",\n            \"description\": \"Comerciante BIT.AO GPO\",\n            \"paymentMethod\": \"GPO\",\n            \"isDefault\": true,\n            \"isActive\": true,\n            \"isEnabled\": true,\n            \"createdBy\": \"Efigenio Sebastião\",\n            \"updatedBy\": \"Efigenio Sebastião\",\n            \"createdDate\": \"2025-02-27T09:16:46.296892\",\n            \"updatedDate\": \"2025-02-27T09:17:15.440101\",\n            \"applicationKyes\": [\n                {\n                    \"apiKey\": \"13774509-8b1d-4ee8-b8fe-1a9d1b042dc7\",\n                    \"webHookName\": null,\n                    \"webHookdescription\": null,\n                    \"webHookUrl\": null,\n                    \"isActive\": true,\n                    \"isTransactional\": null\n                }\n            ]\n        },\n        {\n            \"id\": \"38747d40-de5e-43db-954e-e8f4bd6c59e7\",\n            \"name\": \"Comerciante BIT.AO REF(Factura)\",\n            \"description\": \"Comerciante BIT.AO REF(Factura)\",\n            \"paymentMethod\": \"REF\",\n            \"isDefault\": true,\n            \"isActive\": true,\n            \"isEnabled\": true,\n            \"createdBy\": \"Efigenio Sebastião\",\n            \"updatedBy\": \"Fabricio Gonga\",\n            \"createdDate\": \"2025-02-27T09:17:59.1702856\",\n            \"updatedDate\": \"2025-03-03T16:11:40.1015498\",\n            \"applicationKyes\": [\n                {\n                    \"apiKey\": \"0e6f695b-c757-4803-8386-cffa0c02265a\",\n                    \"webHookName\": null,\n                    \"webHookdescription\": null,\n                    \"webHookUrl\": null,\n                    \"isActive\": true,\n                    \"isTransactional\": null\n                },\n                {\n                    \"apiKey\": \"2c3b230a-3511-4f26-9c5e-88323f18cded\",\n                    \"webHookName\": null,\n                    \"webHookdescription\": null,\n                    \"webHookUrl\": null,\n                    \"isActive\": true,\n                    \"isTransactional\": null\n                }\n            ]\n        }\n    ],\n    \"totalCount\": 2,\n    \"hasMorePages\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "Get an application point-of-sales",
+					"id": "47194987-41e6b1a2-5e8c-4491-bd92-bd7438a8d37a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server}}/{{api_version}}/applications/0?isActive&isDefault&isEnabled&limit&skip&supportBank",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"{{api_version}}",
+								"applications",
+								"0"
+							],
+							"query": [
+								{
+									"key": "isActive",
+									"value": null,
+									"type": "text"
+								},
+								{
+									"key": "isDefault",
+									"value": null,
+									"type": "text"
+								},
+								{
+									"key": "isEnabled",
+									"value": null,
+									"type": "text"
+								},
+								{
+									"key": "limit",
+									"value": null,
+									"type": "text"
+								},
+								{
+									"key": "skip",
+									"value": null,
+									"type": "text"
+								},
+								{
+									"key": "supportBank",
+									"value": null,
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "47194987-d5488239-4473-4b90-a2d0-1d4c136e471e"
+		},
+		{
+			"name": "charges",
+			"item": [
+				{
+					"name": "Get all charges",
+					"id": "47194987-ce61c826-1139-471b-afa4-1e60507c6d1b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "pt-BR",
+								"description": "Language preferences that is passed via HTTP when a document is requested",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server}}/{{api_version}}/charges?limit=8",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"{{api_version}}",
+								"charges"
+							],
+							"query": [
+								{
+									"key": "amountFrom",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "amountTo",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "culture",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "currency",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "dateFrom",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "dateTo",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "disputes",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "merchantTransactionId",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "skip",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "47194987-e470f8c9-0780-44aa-a5e4-376929edf7d2",
+							"name": "example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{Token}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "pt-BR",
+										"description": "Language preferences that is passed via HTTP when a document is requested",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server}}/{{api_version}}/charges",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"{{api_version}}",
+										"charges"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Aug 2025 19:12:38 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "Request-Context",
+									"value": "appId=cid-v1:effb99db-0946-4cd2-be28-4685565f0267"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"payments\": [\n        {\n            \"id\": \"99C3892F-8018-4796-BA21-9054277E354D\",\n            \"merchantTransactionId\": \"TA_4c0128aa-19c1-4b33-997d-14331307b412\",\n            \"type\": \"Charge\",\n            \"operation\": \"ONE_TIME_PAYMENT\",\n            \"amount\": 3,\n            \"currency\": \"AOA\",\n            \"status\": \"Success\",\n            \"description\": \"REF Application Activate Charge\",\n            \"disputes\": false,\n            \"applicationFeeAmount\": 0,\n            \"paymentMethod\": \"REF\",\n            \"createdDate\": \"2025-02-27T09:18:07.6208211\",\n            \"updatedDate\": \"2025-02-27T09:23:55.3424468\",\n            \"options\": [],\n            \"reference\": {\n                \"referenceNumber\": \"896775001\",\n                \"dueDate\": \"2025-03-02T09:18:07.7133796\",\n                \"entity\": \"00348\"\n            }\n        },\n        {\n            \"id\": \"F1D00117-30E8-4312-9FBF-3C30752225D4\",\n            \"merchantTransactionId\": \"T20250227092105\",\n            \"type\": \"Charge\",\n            \"operation\": \"ONE_TIME_PAYMENT\",\n            \"amount\": 50,\n            \"currency\": \"AOA\",\n            \"status\": \"Failed\",\n            \"description\": \"POSTMAN_Sync_On_TST-TS20250227092105\",\n            \"disputes\": false,\n            \"applicationFeeAmount\": 0,\n            \"paymentMethod\": \"GPO\",\n            \"createdDate\": \"2025-02-27T09:21:05.6730236\",\n            \"updatedDate\": \"2025-02-27T09:22:41.1939485\",\n            \"options\": [],\n            \"reference\": null\n        },\n        {\n            \"id\": \"01B44843-FD2D-49FB-B0CC-CB0AF0C682C8\",\n            \"merchantTransactionId\": \"Xm2502271711415\",\n            \"type\": \"Charge\",\n            \"operation\": \"ONE_TIME_PAYMENT\",\n            \"amount\": 14500,\n            \"currency\": \"AOA\",\n            \"status\": \"Pending\",\n            \"description\": \"Pagamento\",\n            \"disputes\": false,\n            \"applicationFeeAmount\": 0,\n            \"paymentMethod\": \"REF\",\n            \"createdDate\": \"2025-02-27T17:11:46.4173333\",\n            \"updatedDate\": \"2025-02-27T17:11:47.8553425\",\n            \"options\": [],\n            \"reference\": {\n                \"referenceNumber\": \"100288458\",\n                \"dueDate\": \"2025-03-02T17:11:47.6206245\",\n                \"entity\": \"00348\"\n            }\n        },\n        {\n            \"id\": \"D2761E27-80E2-4D89-9FA9-F45097BCD3FB\",\n            \"merchantTransactionId\": \"00002323\",\n            \"type\": \"Charge\",\n            \"operation\": \"ONE_TIME_PAYMENT\",\n            \"amount\": 1000,\n            \"currency\": \"AOA\",\n            \"status\": \"Failed\",\n            \"description\": \"Pagamento URL\",\n            \"disputes\": false,\n            \"applicationFeeAmount\": 0,\n            \"paymentMethod\": \"GPO\",\n            \"createdDate\": \"2025-03-15T22:33:57.6060631\",\n            \"updatedDate\": \"2025-03-15T22:34:03.7164964\",\n            \"options\": [],\n            \"reference\": null\n        },\n        {\n            \"id\": \"3E75B6B8-7944-42F0-9BC2-477124A4D483\",\n            \"merchantTransactionId\": \"sK2505070118387\",\n            \"type\": \"Charge\",\n            \"operation\": \"ONE_TIME_PAYMENT\",\n            \"amount\": 1000,\n            \"currency\": \"AOA\",\n            \"status\": \"Pending\",\n            \"description\": \"Pagamento da encomenda 10\",\n            \"disputes\": false,\n            \"applicationFeeAmount\": 0,\n            \"paymentMethod\": \"REF\",\n            \"createdDate\": \"2025-05-07T01:18:39.743706\",\n            \"updatedDate\": \"2025-05-07T01:18:40.7604919\",\n            \"options\": [],\n            \"reference\": {\n                \"referenceNumber\": \"723582502\",\n                \"dueDate\": \"2025-05-10T01:18:40.5599421\",\n                \"entity\": \"00348\"\n            }\n        },\n        {\n            \"id\": \"52911A6D-5A42-44C3-BBCB-AFE7A641541D\",\n            \"merchantTransactionId\": \"JX2505070120233\",\n            \"type\": \"Charge\",\n            \"operation\": \"ONE_TIME_PAYMENT\",\n            \"amount\": 100,\n            \"currency\": \"AOA\",\n            \"status\": \"Failed\",\n            \"description\": \"Appy Pay charge Request\",\n            \"disputes\": false,\n            \"applicationFeeAmount\": 0,\n            \"paymentMethod\": \"GPO\",\n            \"createdDate\": \"2025-05-07T01:20:25.0960343\",\n            \"updatedDate\": \"2025-05-07T01:20:31.0062787\",\n            \"options\": [],\n            \"reference\": null\n        },\n        {\n            \"id\": \"58951751-9079-4960-BC16-DABE7159D4E6\",\n            \"merchantTransactionId\": \"Xr2505070120437\",\n            \"type\": \"Charge\",\n            \"operation\": \"ONE_TIME_PAYMENT\",\n            \"amount\": 200,\n            \"currency\": \"AOA\",\n            \"status\": \"Failed\",\n            \"description\": \"Appy Pay charge Request\",\n            \"disputes\": false,\n            \"applicationFeeAmount\": 0,\n            \"paymentMethod\": \"GPO\",\n            \"createdDate\": \"2025-05-07T01:20:44.0287644\",\n            \"updatedDate\": \"2025-05-07T01:20:46.9840793\",\n            \"options\": [],\n            \"reference\": null\n        },\n        {\n            \"id\": \"B8126AD7-326C-44E9-825E-0204D87A870C\",\n            \"merchantTransactionId\": \"HV2505070120594\",\n            \"type\": \"Charge\",\n            \"operation\": \"ONE_TIME_PAYMENT\",\n            \"amount\": 500,\n            \"currency\": \"AOA\",\n            \"status\": \"Failed\",\n            \"description\": \"Appy Pay charge Request\",\n            \"disputes\": false,\n            \"applicationFeeAmount\": 0,\n            \"paymentMethod\": \"GPO\",\n            \"createdDate\": \"2025-05-07T01:20:59.7636475\",\n            \"updatedDate\": \"2025-05-07T01:21:02.1419569\",\n            \"options\": [],\n            \"reference\": null\n        }\n    ],\n    \"totalCount\": 8,\n    \"hasMorePages\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "Post a Charge",
+					"id": "47194987-25c8d313-8e62-4ffe-9004-372658f3600f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/vnd.appypay.asyncapi+json",
+								"description": "Accept header is used by HTTP clients to tell the server which type of content they expect/prefer as response.\n\nAllowed values:\napplication/json\napplication/vnd.appypay.asyncapi+json\nDefault:\napplication/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"amount\": 200,\n\t\"currency\":\"AOA\",\n\t\"merchantTransactionId\":\"GPOTEST9\",\n\t\"description\":\"Pagamento\",\n\t\"paymentMethod\":\"GPO_5bf25de8-605e-4ec5-a216-8983c6c825e8\",\n    \"paymentInfo\": {\n        \"phoneNumber\": 923592995\n    }\n\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/{{api_version}}/charges",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"{{api_version}}",
+								"charges"
+							]
+						},
+						"description": "This service allows merchant support team to create a charge.\n\nThe required payment information (**paymentInfo**) of a charge can be **different** based on the **payment method**. Please check the **Body Examples** in the right panel or payment method details [here](https://www.appypay.co.ao/developers#/62b060530d899-post-a-charge.../../docs/Payments%20Gateway%20-%20General%20Usage/Supported-Payment-Methods.md).\n\nFor **SDD** payments, an **ACTIVE** mandate is required to make the payment. The **mandateId** passed in the **paymentInfo** must be **active** and payment details must abide by rules defined in the mandate.\n\nFor **GPO** payments, the phoneNumber field is used to simulate different payment response scenarios. Please refer to the Body Examples on the right panel for more details.\n\nAPI support **message translations** in **Portuguese and English**.\n\nPass the **desired language** code with **Accept-Language** on header or query parameter **culture**.\n\n### [Request Types](https://www.appypay.co.ao/developers#/62b060530d899-post-a-charge#request-types)\n\nThis endpoint supports both **synchronous** and **asynchronous** clients. By default the request will be synchronous.\n\n#### [Synchronous](https://www.appypay.co.ao/developers#/62b060530d899-post-a-charge#synchronous)\n\nIn this case the client sends a request, and waits for a response with transaction result with a **HTTP 200** code.\n\n> &lt;p &gt;Depending on the payment method the responses can take up to 90 seconds.&lt;/p&gt; \n  \n\n#### [Asynchronous](https://www.appypay.co.ao/developers#/62b060530d899-post-a-charge#asynchronous)\n\nIn this case the client sends a request, if accepted, is notified with a **HTTP 202** code. The endpoint will continue running the task on background, sending the result of the transaction by triggering a request POST with the result.\n\nThe POST will be sent to the configured merchant Webhook (check [here](https://www.appypay.co.ao/developers#/62b060530d899-post-a-charge.../../docs/Payments%20Gateway%20-%20General%20Usage/Webhook.md)), and will have the same body as described as sample payload.\n\nUse **Accept** header to choose the request type.\n\n- Synchronous: `application/json`\n    \n- Asynchronous: `application/vnd.appypay.asyncapi+json`\n    \n\n<img src=\"https://content.pstmn.io/5a4e6089-b7ab-4c73-89a1-781fa4e35f94/aW1hZ2UucG5n\" alt=\"\" height=\"753\" width=\"1600\">"
+					},
+					"response": [
+						{
+							"id": "47194987-d3874780-a253-49b9-8eb2-1044a82ba128",
+							"name": "TESTE PAGAMENTO POR REFERENCIA",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"amount\": 1000,\n\t\"currency\":\"AOA\",\n\t\"merchantTransactionId\":\"XXX2\",\n\t\"description\":\"TEST 23\",\n\t\"paymentMethod\":\"REF_0e6f695b-c757-4803-8386-cffa0c02265a\"\n\t\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/{{api_version}}/charges",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"{{api_version}}",
+										"charges"
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Aug 2025 19:57:30 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "Request-Context",
+									"value": "appId=cid-v1:effb99db-0946-4cd2-be28-4685565f0267"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": \"982a7d4a-d828-42ec-8315-258157f3949c\",\n    \"responseStatus\": {\n        \"successful\": true,\n        \"status\": \"Pending\",\n        \"code\": 101,\n        \"message\": \"A solicitação foi aceita para processamento.\",\n        \"source\": \"REF\",\n        \"sourceDetails\": {\n            \"attempt\": 1,\n            \"type\": \"NONE\",\n            \"code\": \"NONE\",\n            \"message\": \"OK\"\n        },\n        \"reference\": {\n            \"referenceNumber\": \"858996778\",\n            \"dueDate\": \"2025-08-30T19:57:30.6833556+00:00\",\n            \"entity\": \"00348\"\n        }\n    }\n}"
+						},
+						{
+							"id": "47194987-a25d1b68-85d2-49bb-8037-efe3616b9eef",
+							"name": "Recusado pelo cliente",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"amount\": 1000,\n\t\"currency\":\"AOA\",\n\t\"merchantTransactionId\":\"XXX2\",\n\t\"description\":\"TEST 23\",\n\t\"paymentMethod\":\"GPO_5bf25de8-605e-4ec5-a216-8983c6c825e8\",\n    \"paymentInfo\": {\n        \"phoneNumber\": 925924797\n    }\n\t\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/{{api_version}}/charges",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"{{api_version}}",
+										"charges"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Aug 2025 20:16:54 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "Request-Context",
+									"value": "appId=cid-v1:70cec0fb-d432-4469-b157-318924c09066"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": \"007ffd31-2467-4ce0-939d-69de4cc6af71\",\n    \"responseStatus\": {\n        \"successful\": false,\n        \"status\": \"Failed\",\n        \"code\": 231,\n        \"message\": \"Pagamento não autorizado pelo cliente. \",\n        \"source\": \"GPO\",\n        \"sourceDetails\": {\n            \"attempt\": 1,\n            \"type\": \"EPMS_PROCESSOR\",\n            \"code\": \"EPMS_940\",\n            \"message\": \"Recusado pelo cliente.\"\n        },\n        \"reference\": null\n    }\n}"
+						},
+						{
+							"id": "47194987-80f106f5-1eaf-46c4-ad13-862f345277cf",
+							"name": "Pagamento assincrono com sucesso",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.appypay.asyncapi+json",
+										"description": "Accept header is used by HTTP clients to tell the server which type of content they expect/prefer as response.\n\nAllowed values:\napplication/json\napplication/vnd.appypay.asyncapi+json\nDefault:\napplication/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"amount\": 200,\n\t\"currency\":\"AOA\",\n\t\"merchantTransactionId\":\"GPOTEST2\",\n\t\"description\":\"Pagamento\",\n\t\"paymentMethod\":\"GPO_5bf25de8-605e-4ec5-a216-8983c6c825e8\",\n    \"paymentInfo\": {\n        \"phoneNumber\": 925924797\n    }\n\t\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/{{api_version}}/charges",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"{{api_version}}",
+										"charges"
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Aug 2025 20:19:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "Request-Context",
+									"value": "appId=cid-v1:70cec0fb-d432-4469-b157-318924c09066"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": \"f44856d2-dd69-4dec-a831-91cb0074426d\",\n    \"responseStatus\": {\n        \"successful\": true,\n        \"status\": \"Requested\",\n        \"code\": 101,\n        \"message\": \"A solicitação foi aceita para processamento.\",\n        \"source\": \"GPO\",\n        \"sourceDetails\": null\n    }\n}"
+						},
+						{
+							"id": "47194987-ab068166-db5f-47c8-922d-696ef49148ae",
+							"name": "Pagamento sincrono aceite",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/vnd.appypay.asyncapi+json",
+										"description": "Accept header is used by HTTP clients to tell the server which type of content they expect/prefer as response.\n\nAllowed values:\napplication/json\napplication/vnd.appypay.asyncapi+json\nDefault:\napplication/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"amount\": 200,\n\t\"currency\":\"AOA\",\n\t\"merchantTransactionId\":\"GPOTEST3\",\n\t\"description\":\"Pagamento\",\n\t\"paymentMethod\":\"GPO_5bf25de8-605e-4ec5-a216-8983c6c825e8\",\n    \"paymentInfo\": {\n        \"phoneNumber\": 925924797\n    }\n\t\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/{{api_version}}/charges",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"{{api_version}}",
+										"charges"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Aug 2025 20:22:33 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "Request-Context",
+									"value": "appId=cid-v1:70cec0fb-d432-4469-b157-318924c09066"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"id\": \"cf266ab3-df6f-4c09-a447-36248123239d\",\n    \"responseStatus\": {\n        \"successful\": true,\n        \"status\": \"Success\",\n        \"code\": 100,\n        \"message\": \"Obrigado! O seu pagamento foi registado com Sucesso.\",\n        \"source\": \"GPO\",\n        \"sourceDetails\": {\n            \"attempt\": 1,\n            \"type\": \"NONE\",\n            \"code\": \"NONE\",\n            \"message\": \"OK\"\n        },\n        \"reference\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get a charge",
+					"id": "47194987-4a7e5e91-c3c0-45ae-b452-57ae32a0d8a1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "pt-BR",
+								"description": "Language preferences that is passed via HTTP when a document is requested",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server}}/{{api_version}}/charges/8BE7404E-5300-4F9B-8260-33D0D968E38A",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"{{api_version}}",
+								"charges",
+								"8BE7404E-5300-4F9B-8260-33D0D968E38A"
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "47194987-8e0e8277-9da0-465e-a4a5-59fe485ce3aa",
+							"name": "Exemplo",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{Token}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "pt-BR",
+										"description": "Language preferences that is passed via HTTP when a document is requested",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server}}/{{api_version}}/charges/8BE7404E-5300-4F9B-8260-33D0D968E38A",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"{{api_version}}",
+										"charges",
+										"8BE7404E-5300-4F9B-8260-33D0D968E38A"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Aug 2025 20:26:19 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=2592000"
+								},
+								{
+									"key": "Request-Context",
+									"value": "appId=cid-v1:70cec0fb-d432-4469-b157-318924c09066"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"payment\": {\n        \"id\": \"8be7404e-5300-4f9b-8260-33d0d968e38a\",\n        \"merchantTransactionId\": \"zc2502211633215\",\n        \"type\": \"Charge\",\n        \"operation\": \"ONE_TIME_PAYMENT\",\n        \"amount\": 1000,\n        \"currency\": \"AOA\",\n        \"status\": \"Success\",\n        \"description\": \"Appy Pay charge Request\",\n        \"disputes\": false,\n        \"applicationFeeAmount\": 0,\n        \"paymentMethod\": \"GPO\",\n        \"createdDate\": \"2025-02-21T16:33:21.7644269\",\n        \"updatedDate\": \"2025-02-21T16:33:36.1863752\",\n        \"options\": [],\n        \"reference\": null,\n        \"eletronicReceipt\": null,\n        \"transactionEvents\": [\n            {\n                \"id\": 930577,\n                \"transactionId\": \"8be7404e-5300-4f9b-8260-33d0d968e38a\",\n                \"type\": \"Charge\",\n                \"providerTransactionId\": \"3JTDPI14ZVN638OB\",\n                \"merchantReceipt\": null,\n                \"customerReceipt\": null,\n                \"actionStatus\": false,\n                \"createdDate\": \"2025-02-21T16:33:36.1845789\",\n                \"responseStatus\": {\n                    \"successful\": true,\n                    \"code\": 100,\n                    \"message\": \"Obrigado! O seu pagamento foi registado com Sucesso.\",\n                    \"source\": \"GPO\",\n                    \"sourceDetails\": null\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "47194987-b1af982e-80d3-4266-8341-43d09101122d",
+			"description": "This service allows merchant support team to get a list of charges. Also, allows merchant support team to search for specific charges based on filters. This functionality is useful to check a pending payment status or check charges that meet some criteria."
+		},
+		{
+			"name": "references",
+			"item": [],
+			"id": "47194987-14a35b70-5254-4550-b74f-9c2183def7a6"
+		},
+		{
+			"name": "refunds",
+			"item": [],
+			"id": "47194987-6eef35e1-0c9f-4cc4-9799-092ef4245685"
+		},
+		{
+			"name": "reverses",
+			"item": [],
+			"id": "47194987-b1a8ae84-83b5-47a0-9d2a-32889a1dd8c3"
+		},
+		{
+			"name": "funds-transfers",
+			"item": [],
+			"id": "47194987-edb36e70-eb9d-4d67-a972-9f28f7218998"
+		},
+		{
+			"name": "accounts",
+			"item": [],
+			"id": "47194987-76bd3d4b-5953-4735-a81d-1bde94d7b667"
+		},
+		{
+			"name": "qr-codes",
+			"item": [
+				{
+					"name": "Post a GPO QR Code",
+					"id": "47194987-0857bf54-bae0-4f40-8191-d701b2cffce8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Charset",
+								"value": "application/vnd.appypay.asyncapi+json",
+								"description": "Accept header is used by HTTP clients to tell the server which type of content they expect/prefer as response.\n\nAllowed values:\napplication/json\napplication/vnd.appypay.asyncapi+json\nDefault:\napplication/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"amount\":200,\n    \"currency\":\"AOA\",\n    \"merchantTransactionId\":\"gpotestqr2\",\n    \"paymentMethod\":\"GPO_5bf25de8-605e-4ec5-a216-8983c6c825e8\",\n    \"description\":\"teste\",\n    \"qrCodeType\":\"SINGLE\",\n    \"minAmount\":1000,\n    \"startDate\":\"2025-08-27\",\n    \"endDate\":\"2025-08-27\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/{{api_version}}/qr-codes",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"{{api_version}}",
+								"qr-codes"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "47194987-b68931e2-c8f1-4494-9899-191f77ecf2d6"
+		},
+		{
+			"name": "direct-debit-mandates",
+			"item": [],
+			"id": "47194987-0b6fda24-a8e2-425d-a517-c58bec8f9098"
+		},
+		{
+			"name": "application-sdd-creditor-accounts",
+			"item": [],
+			"id": "47194987-f524ef7a-2049-4cea-9c1e-d6667526fa06"
+		}
+	]
+}
